@@ -1,15 +1,15 @@
 # Author Brendan Horan
 # License : BSD 3-Clause
-# Description : Read the DF robot c02 laser sensor
+# Description : Read the DF robot co2 laser sensor
 
 import machine
 from machine import ADC, Pin
 
-class C02_base:
+class CO2_base:
   def __init__(self, pin):
     self.pin = pin
 
-class C02_sensor(C02_base):
+class CO2_sensor(CO2_base):
   def read_sensor(self):
     adc = ADC(Pin(self.pin))
     adc.atten(adc.ATTN_11DB)
@@ -21,4 +21,4 @@ class C02_sensor(C02_base):
     if concentration > 0:
       return(concentration)
     else:
-      print('c02 sensor not ready')
+      print('co2 sensor not ready')
