@@ -6,11 +6,11 @@ https://www.futurlec.com/Datasheet/Sensor/MH-Z14.pdf
 Usage:   
 
 ```
-import co2
-co2 = co2.Co2_sensor(36)
-co2.read_sensor()
+import c02
+c02 = c02.C02_sensor(36)
+c02.read_sensor()
 ```
 
-Where 36 is the pin the Co2 Sensor is connected to. Must be an ADC pin.
+Where 36 is the pin the C02 Sensor is connected to. Must be an ADC pin.
 
 
