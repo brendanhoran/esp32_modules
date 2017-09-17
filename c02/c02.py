@@ -18,4 +18,7 @@ class C02_sensor(C02_base):
     voltage = sensorValue*(3300/4095.0)
     voltage_diference=voltage-400
     concentration=voltage_diference*50.0/16.0
-    return(concentration)
+    if concentration > 0:
+      return(concentration)
+    else:
+      print('c02 sensor not ready')
