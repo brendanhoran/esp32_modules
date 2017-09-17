@@ -5,11 +5,11 @@
 import machine
 from machine import ADC, Pin
 
-class Co2_base:
+class C02_base:
   def __init__(self, pin):
     self.pin = pin
 
-class Co2_sensor(Co2_base):
+class C02_sensor(Co2_base):
   def read_sensor(self):
     adc = ADC(Pin(self.pin))
     adc.atten(adc.ATTN_11DB)
