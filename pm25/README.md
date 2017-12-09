@@ -1,3 +1,4 @@
+*work in progress*
 
 REF :     
 https://www.dfrobot.com/wiki/index.php/PM2.5_laser_dust_sensor_SKU:SEN0177    
@@ -7,7 +8,7 @@ Usage :
 
 ```
 import pm25
-pm25 = PM25_sensor(25,26)
+pm25 = pm25.PM25_sensor(25,26)
 pm25.read_sensor()
 ```
 
