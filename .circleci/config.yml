@@ -10,8 +10,9 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install flake8
+            pip install flake8 flake8-junit-report
             mkdir -p test-results/flake8
-            flake8 --exclude=venv*,LICENSE,README.md --statistic project/* --output-file=test-results/flake8/flake8.xml
+            flake8 --exclude=venv*,LICENSE,README.md --statistic project/* --output-file=test-results/flake8/flake8.txt
+            flake8_junit test-results/flake8/flake8.txt test-results/flake8/flake8.xml
       - store_test_results:
           path: test-results/flake8
