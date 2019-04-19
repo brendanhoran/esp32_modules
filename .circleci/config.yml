@@ -11,4 +11,4 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install flake8
-            flake8 --exclude=venv* --statistics
+            flake8 --exclude=venv*,LICENSE,README.md --statistic project/*
