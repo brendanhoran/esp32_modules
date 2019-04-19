@@ -13,6 +13,7 @@ jobs:
             pip install flake8 flake8-junit-report
             mkdir -p test-results/flake8
             flake8 --exclude=venv*,LICENSE,README.md --statistic project/* --output-file=test-results/flake8/flake8.txt
-            flake8_junit test-results/flake8/flake8.txt test-results/flake8/flake8.xml
+            flake8_junit test-results/flake8/flake8.txt test-results/flake8/results.xml
+            rm -f test-results/flake8/flake8.txt
       - store_test_results:
           path: test-results/flake8
