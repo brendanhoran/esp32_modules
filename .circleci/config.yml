@@ -16,4 +16,4 @@ jobs:
             flake8_junit test-results/flake8/flake8.txt test-results/flake8/results.xml
             rm -f test-results/flake8/flake8.txt
       - store_test_results:
-          path: test-results/flake8
+          path: test-results
